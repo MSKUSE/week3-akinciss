@@ -21,6 +21,20 @@ public class FindGrade {
         }
     }
 }
+public class FindMaximum {
+    public static void main(String[] args) {
+
+        int num1=Integer.parseInt(args[0]);
+        int num2=Integer.parseInt(args[1]);
+
+        boolean condition = num1>num2;
+        int max = condition ? num1 : num2;
+
+        System.out.println(max);
+
+
+    }
+}
 public class FindMinimum {
 
     public static void main(String[] args) {
@@ -36,17 +50,24 @@ public class FindMinimum {
 
     }
 }
-public class FindMaximum {
+public class FindPrimes {
     public static void main(String[] args) {
+        int number = Integer.parseInt(args[0]);
 
-        int num1=Integer.parseInt(args[0]);
-        int num2=Integer.parseInt(args[1]);
+        for (int i = 0; i <= number; i++) {
+            boolean isPrime = true;
+            for (int j = 2; j < i; j++) {
+                if (i % j ==0){
+                    isPrime = false;
+                    break;
+                }
+                if(isPrime){
+                    System.out.println(i);
+                }
+                
+            }
 
-        boolean condition = num1>num2;
-        int max = condition ? num1 : num2;
-
-        System.out.println(max);
-
+        }
 
     }
 }
