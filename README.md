@@ -1,1 +1,52 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/ZN_JTPgu)
+public class FindGrade {
+
+    public static void main(String[] args) {
+
+        int score = Integer.parseInt(args[0]);
+
+        if (score >= 90 ){
+            System.out.println("Grade :A");
+
+        } else if (score >= 80 && score <=89) {
+            System.out.println("Grade :B");
+
+        } else if (score>=70 && score <=79) {
+            System.out.println("Grade :C");
+
+        } else if (score >=60 && score <=69) {
+            System.out.println("Grade : D");
+
+        }else {
+            System.out.println("Grade :F");
+        }
+    }
+}
+public class FindMinimum {
+
+    public static void main(String[] args) {
+        int num1 = Integer.parseInt(args[0]);
+        int num2= Integer.parseInt(args[1]);
+        int num3 = Integer.parseInt(args[2]);
+
+        boolean num1_min = num1 < num2 && num1 < num3;
+        boolean num2_min = num2 < num1 && num2 <num3;
+
+        int min = num1_min ? num1 : num2_min ? num2 :num3;
+        System.out.println(min);
+
+    }
+}
+public class FindMaximum {
+    public static void main(String[] args) {
+
+        int num1=Integer.parseInt(args[0]);
+        int num2=Integer.parseInt(args[1]);
+
+        boolean condition = num1>num2;
+        int max = condition ? num1 : num2;
+
+        System.out.println(max);
+
+
+    }
+}
